@@ -1,13 +1,3 @@
-terraform {
-  required_version = ">= 1.0"
-  required_providers {
-    azurerm ={
-      source = "hashicorp/azurerm"
-      version = "3.21.1"
-    }
-  }
-}
-
 resource "azurerm_resource_group" "vmrg" {
   name     = var.rgname
   location = var.location
