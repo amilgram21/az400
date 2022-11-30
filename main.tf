@@ -1,6 +1,19 @@
-provider "azurerm" {
-  features {}
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.33.0"
+    }
+  }
 }
+
+provider "azurerm" {
+  # Configuration options
+}
+
+#provider "azurerm" {
+#  features {}
+#}
 
 resource "azurerm_resource_group" "vmrg" {
   name     = var.rgname
